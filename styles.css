@@ -1,0 +1,87 @@
+/* Styles for the Jewish Opera Industry Database */
+
+body {
+  background: skyblue; 
+  color: black;
+  margin: 1;
+}
+
+main, footer {
+  padding: 0 1in;
+  margin: 1;
+}
+
+h1, .subtitle, section, footer {
+  text-align: left;
+}
+
+h1 {
+  margin-bottom: 0;
+  font-size: 3em;
+  text-align: center;
+}
+
+.subtitle {
+  margin-top: 1;
+  font-size: 1.75em;
+  text-align: center;
+}
+
+.book-cover {
+  display: block;      /* needed for margin: auto to center */
+  margin: 1em auto;
+  width: 300px;        /* change this to resize */
+  max-width: 100%;
+  height: auto;
+}
+
+.section-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.section-row section {
+  flex: 1 1 250px;
+}
+
+.section-img {
+  display: block;
+  margin: 1em auto;
+  width: 100%;
+  max-width: 300px;    /* change this to resize */
+  height: 170px;       /* same height keeps the three images even */
+  object-fit: cover;   /* crops instead of stretching */
+}
+
+.author-bio {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  text-align: left;    /* bio reads left-aligned beside the photo */
+}
+
+.author-headshot {
+  flex: 0 0 auto;
+  width: 220px;        /* change this to resize */
+  max-width: 35%;
+  height: auto;
+  margin-top: 1em;
+}
+
+.author-text {
+  flex: 1;
+}
+
+/* Stack the photo above the text on narrow screens */
+@media (max-width: 600px) {
+  .author-bio {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .author-headshot {
+    max-width: 60%;
+  }
+}
